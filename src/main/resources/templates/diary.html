@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary Page</title>
+    <link rel="stylesheet" href="/css/diary.css">
+    <link rel="icon" href="/icons/logo.png">
+</head>
+<body>
+    <div class="header wf-section">
+        <div class="logo-block">
+            <div class="logo">
+                <img src="/icons/logo.png" loading="lazy" alt="" class="logo-img">
+                <div class="logo-text">Diary<span>App</span> </div>
+            </div>
+        </div>
+        <div class="header-block">
+            <div class="nav-block">
+                <div class="nav">
+                    <a href="/dailyNote/getDailyNotes" class="nav-text">Daily Notes</a>
+                </div>
+                <div class="nav">
+                    <a href="#" class="nav-text nav-active">Diary</a>
+                </div>
+                <div class="nav">
+                    <a href="/user/getUsersPass" class="nav-text">AdminPass</a>
+                </div>
+                <div class="nav">
+                    <a href="/user/getUsersDelete" class="nav-text">AdminDelete</a>
+                </div>
+                <div class="nav" style="margin-left: 100px;">
+                    <a href="/user/logout" class="nav-text">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="all-notes">
+        <div class="notes">
+            <form th:action="@{/diary/deleteDiary/{diary_id} (diary_id=${diary.getDiary_id()})}" th:method="post" class="note" th:each="diary : ${diaries}">
+                <div class="note-title" style="white-space: pre-wrap; overflow: hidden; text-overflow: ellipsis;" th:text="${diary.getTitle()}"></div>
+                <a th:href="@{/diary/getDiary/{diary_id}(diary_id=${diary.getDiary_id()})}">
+                    <p class="text" style="white-space: pre-wrap; overflow: hidden; text-overflow: ellipsis;" th:text="${diary.getText()}"></p>
+                </a>
+                <div class="delete">
+                    <button class="deleteButton" type="submit"><img src="/icons/delete-16.ico" alt=""></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="/diary/newDiary" class="create-new">+</a>
+</body>
+</html>

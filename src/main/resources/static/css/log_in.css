@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #081b27;
+}
+
+form {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    width: 500px;
+    height: 700px;
+    border: 3px solid #ffb24b;
+    border-radius: 30px;
+}
+.nav-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    height: 80px;
+    margin-right: 60px;
+    margin-left: auto;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.logo-block {
+    width: 30%;
+    height: 80px;
+}
+.nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 120px;
+    height: 80px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav-text {
+    font-family: Kurale, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav-text:hover {
+    height: 50px;
+    padding-top: 29px;
+    padding-bottom: 0px;
+    border-style: none none solid;
+    border-width: 1px 0px 3px 1px;
+    border-color: #000 #000 #ffb24b;
+    color: #ffd296;
+}
+
+.nav-active {
+    color: #ffb24b;
+}
+
+.nav-active:hover {
+    padding-top: 27px;
+    border: none;
+    color: #ffb24b;
+}
+.header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    max-width: 3000px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #0c2738;
+}
+
+.header-block {
+    display: block;
+    width: 100%;
+    height: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+
+.logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+}
+
+.logo-text {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.logo-text span {
+    color: #ffb24b;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px #fff solid;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+  color: #ffb24b;
+  background-color: #102e41;
+  border-color: #ffb24b;
+}
+
+.login-container {
+    display: flex;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 65px 0 12px 0;
+}
+
+.imgcontainer-2 {
+    text-align: center;
+    margin: 25px 0 12px 0;
+  }
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.container label {
+    color: #ffb24b;
+    font-weight: 200;
+    font-size: 16px;
+    font-family: Kurale, sans-serif;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: Kurale, sans-serif;
+}
+
+span.psw a {
+    color: #ffb24b;
+}
+
+span.psw a:hover {
+    color: #ff9100;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

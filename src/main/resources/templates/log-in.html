@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+        <link rel="icon" href="/icons/logo.png">
+    <link rel="stylesheet" href="/css/log_in.css">
+</head>
+<body>
+<div class="header wf-section">
+<div class="logo-block">
+    <div class="logo">
+        <img src="/icons/logo.png" loading="lazy" alt="" class="logo-img">
+        <div class="logo-text">Diary<span>App</span> </div>
+    </div>
+</div>
+<div class="header-block">
+    <div class="nav-block">
+        <div class="nav">
+            <a href="/dailyNote/getDailyNotes" class="nav-text">Daily Notes</a>
+        </div>
+        <div class="nav">
+            <a href="/diary/getDiaries" class="nav-text">Diary</a>
+        </div>
+        <div class="nav">
+            <a href="/user/getUsersPass" class="nav-text">AdminPass</a>
+        </div>
+        <div class="nav">
+            <a href="/user/getUsersDelete" class="nav-text">AdminDelete</a>
+        </div>
+        <div class="nav" style="margin-left: 100px;">
+            <a href="/user/logout" class="nav-text">Log Out</a>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="login-container">
+        <form method="post" action="/login" >
+            <div class="imgcontainer">
+              <img src="/icons/login.png" alt="Avatar" class="avatar">
+            </div>
+          
+            <div class="container">
+              <label for="email"><b>Email</b></label>
+              <input type="text" id="email" placeholder="Enter Email" name="username" required>
+          
+              <label for="password"><b>Password</b></label>
+              <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                  
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+          
+            <div class="container" style="background-color:transparent; margin-top: -65px;">
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+    
+          <form action="/user/register" method="post">
+            <div class="imgcontainer-2">
+              <img src="/icons/login.png" alt="Avatar" class="avatar">
+            </div>
+          
+            <div class="container">
+              <label for="name"><b>Name</b></label>
+              <input type="text" id="name" placeholder="Enter Name" name="name" required>
+
+              <label for="surname"><b>Surname</b></label>
+              <input type="text" id="surname" placeholder="Enter Surname" name="surname" required>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" id="mail" placeholder="Enter Email" name="email" required>
+
+              <label for="password"><b>Password</b></label>
+              <input type="password" id="pass" placeholder="Enter Password" name="password" required>
+                  
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+    </div>
+
+</body>
+</html>

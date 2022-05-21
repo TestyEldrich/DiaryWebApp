@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary Edit</title>
+    <link rel="stylesheet" href="/css/newDiary.css">
+    <link rel="icon" href="/icons/logo.png">
+</head>
+<body>
+<div class="header wf-section">
+    <div class="logo-block">
+        <div class="logo">
+            <img src="/icons/logo.png" loading="lazy" alt="" class="logo-img">
+            <div class="logo-text">Diary<span>App</span> </div>
+        </div>
+    </div>
+    <div class="header-block">
+        <div class="nav-block">
+            <div class="nav">
+                <a href="/dailyNote/getDailyNotes" class="nav-text">Daily Notes</a>
+            </div>
+            <div class="nav">
+                <a href="/diary/getDiaries" class="nav-text nav-active">Diary</a>
+            </div>
+            <div class="nav">
+                <a href="/user/getUsersPass" class="nav-text">AdminPass</a>
+            </div>
+            <div class="nav">
+                <a href="/user/getUsersDelete" class="nav-text">AdminDelete</a>
+            </div>
+            <div class="nav" style="margin-left: 100px;">
+                <a href="/user/logout" class="nav-text">Log Out</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="all-notes">
+    <div class="notes">
+        <form class="note" action="/diary/editDiary" th:method="post">
+            <input class="text" type="hidden" th:value="${diary.getDiary_id()}" id="id" name="diary_id" autocomplete="off" required>
+            <input class="text" type="text" th:value="${diary.getTitle()}" id="Title" name="title" autocomplete="off" required>
+            <textarea class="text2" th:text="${diary.getText()}" type="text" id="Text" name="text" required></textarea>
+
+            <div class="text3">
+                <button type="submit" class="but">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
